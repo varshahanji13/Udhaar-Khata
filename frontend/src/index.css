@@ -1,0 +1,210 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --primary:#7C3AED;
+  --secondary:#A855F7;
+  --light-purple:#F7F3FF;
+  --card:#FFFFFF;
+  --text:#2D2D2D;
+  --success:#10B981;
+  --danger:#EF4444;
+  --shadow:0 8px 25px rgba(124,58,237,0.10);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(
+    135deg,
+    #F7F3FF 0%,
+    #F3E8FF 50%,
+    #FFFFFF 100%
+  );
+  color:var(--text);
+}
+
+#root{
+  min-height:100vh;
+}
+
+/* Cards */
+
+.card,
+.customer-card,
+.dashboard-card{
+  background:var(--card);
+  border:none;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  transition:0.3s ease;
+}
+
+.card:hover,
+.customer-card:hover,
+.dashboard-card:hover{
+  transform:translateY(-4px);
+}
+
+/* Buttons */
+
+.btn-primary{
+  background:var(--primary)!important;
+  border:none!important;
+}
+
+.btn-primary:hover{
+  background:var(--secondary)!important;
+}
+
+.btn-outline-primary{
+  color:var(--primary)!important;
+  border-color:var(--primary)!important;
+}
+
+.btn-outline-primary:hover{
+  background:var(--primary)!important;
+  color:white!important;
+}
+
+/* Navbar */
+
+.navbar{
+  background:white!important;
+  box-shadow:0 2px 15px rgba(0,0,0,0.05);
+}
+
+.navbar-brand{
+  color:var(--primary)!important;
+  font-weight:700;
+}
+
+/* Inputs */
+
+.form-control{
+  border-radius:12px;
+  padding:12px;
+  border:1px solid #ddd;
+}
+
+.form-control:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 0.2rem rgba(124,58,237,0.15);
+}
+
+/* Tables */
+
+.table{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.table thead{
+  background:var(--primary);
+  color:white;
+}
+
+/* Customer Cards */
+
+.customer-card{
+  padding:20px;
+}
+
+.customer-name{
+  font-size:24px;
+  font-weight:600;
+}
+
+.customer-phone{
+  color:#666;
+}
+
+.pending-label{
+  text-align:center;
+  color:#777;
+  margin-top:15px;
+}
+
+.pending-amount{
+  text-align:center;
+  color:#EF4444;
+  font-size:36px;
+  font-weight:700;
+}
+
+/* View Details Button */
+
+.view-details-btn{
+  width:100%;
+  border:2px solid var(--primary);
+  color:var(--primary);
+  border-radius:15px;
+  padding:10px;
+  background:white;
+  transition:0.3s;
+}
+
+.view-details-btn:hover{
+  background:var(--primary);
+  color:white;
+}
+
+/* Dashboard Cards */
+
+.dashboard-card{
+  padding:25px;
+  text-align:center;
+}
+
+.dashboard-card h2{
+  color:var(--primary);
+  font-weight:700;
+}
+
+/* Icons */
+
+.action-btn{
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  border:none;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.action-btn.edit{
+  color:#3B82F6;
+}
+
+.action-btn.delete{
+  color:#EF4444;
+}
+
+/* Modal */
+
+.modal-content{
+  border-radius:20px;
+  border:none;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:var(--primary);
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+  background:#eee;
+}

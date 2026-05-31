@@ -1,0 +1,98 @@
+### Register 
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+    
+  "name":"Varsha",
+  "email":"varsha@gmail.com",
+  "password":"123456"
+}
+
+### Login
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"varsha@gmail.com",
+  "password":"123456"
+}
+
+### Logout 
+POST http://localhost:4000/api/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+
+###
+GET http://localhost:4000/api/test/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+
+###Add Customers
+POST http://localhost:4000/api/customers/add
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+Content-Type: application/json
+
+{
+   "customerName":"Dharani",
+   "phoneNumber":"+919100255865",
+   "address":"Hyderabad",
+   "notes":"Weekly customer"
+}
+
+###Get all Customers
+GET http://localhost:4000/api/customers/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+###Add credit transaction
+POST http://localhost:4000/api/transactions/add
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+Content-Type: application/json
+
+{
+// {
+   "customerId":"6a11b05345182d996c0f9d0e",
+   "type":"credit",
+   "amount":500,
+   "description":"Rice + Milk"
+//},
+  //{
+  // "customerId":"6a0fdccc050d671c42eb026a",
+  // "type":"payment",
+  // "amount":200,
+  // "description":"Paid cash"
+  //}
+}
+
+###Transaction history
+GET http://localhost:4000/api/transactions/6a0fdccc050d671c42eb026a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+###Get dashboard data
+GET http://localhost:4000/api/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+###Get single customer details
+GET http://localhost:4000/api/customers/6a0fdccc050d671c42eb026a
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+###Update customer details
+PUT http://localhost:4000/api/customers/6a11b05345182d996c0f9d0e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+Content-Type: application/json
+
+{
+   "phoneNumber":"+919652735942"
+}
+
+###Delete customer
+DELETE http://localhost:4000/api/customers/6a0fdccc050d671c42eb026a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+###pdf generation
+GET http://localhost:4000/api/reports/6a0fdccc050d671c42eb026a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
+
+###Message Generation
+POST http://localhost:4000/api/reminders/6a11b05345182d996c0f9d0e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlOWQ5Mzc3NDUxZDgzZTNkOTNlYjciLCJpYXQiOjE3NzkzNDQ0NzUsImV4cCI6MTc3OTk0OTI3NX0.9TjtW3LOnmD5smAp6lSTviX-mGunRhLGV776XXFTkfM
