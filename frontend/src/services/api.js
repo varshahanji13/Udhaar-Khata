@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const API_URL = 'https://udhaar-khata-0t2u.onrender.com';
+const API_URL = 'https://udhaar-khata-0t2u.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
